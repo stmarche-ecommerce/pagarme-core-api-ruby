@@ -33,7 +33,7 @@ module PagarmeCoreApi
       @_hash['amount'] = 'amount'
       @_hash['recipient_id'] = 'recipient_id'
       @_hash['options'] = 'options'
-      @_hash['split_rule_id'] = 'Split_Rule_ID'
+      @_hash['split_rule_id'] = 'split_rule_id'
       @_hash
     end
 
@@ -59,7 +59,7 @@ module PagarmeCoreApi
       recipient_id = hash['recipient_id']
       options = CreateSplitOptionsRequest.from_hash(hash['options']) if
         hash['options']
-      split_rule_id = hash['Split_Rule_ID']
+      split_rule_id = hash['split_rule_id']
 
       # Create object from extracted values.
       CancelSplitRequest.new(type,
